@@ -91,7 +91,7 @@ function fillMarks(group, fio){
               if(marks[z].hasChildNodes()) marks[z].removeChild(marks[z].firstChild);
               let input=document.createElement('input');
               input.setAttribute('type','radio');
-              if(z==xmlMarks[k].innerHTML) input.selected=true;
+              if(z==Number(xmlMarks[k].innerHTML)) input.selected=true;
               marks[z].append(input);
             }
           }
