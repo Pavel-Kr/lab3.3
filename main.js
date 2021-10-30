@@ -50,8 +50,8 @@ function setFIO(group){
         option.value=fio;
         select.append(option);
       }
+      break;
     }
-    break;
   }
 }
 function setFacAndCourse(group){
