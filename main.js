@@ -108,10 +108,30 @@ function Update(group){
   setFIO(group);
   setFacAndCourse(group);
   fillLessons(group);
+  let select=document.getElementById('FIO');
+  let fio=select.options[select.selectedIndex].value;
+  fillMarks(group,fio);
 }
 function UpdateMarks(fio){
   let select=document.getElementById('group');
   let group=select.options[select.selectedIndex].value;
   fillMarks(group,fio);
+}
+function calculateMid(){
+  let lessons=document.getElementsByClassName('row');
+  let sum=0;
+  for(let i=0;i<lessons.length;i++){
+    let marks=lessons[i].getElementsByClassName('mark');
+    for(let j=0;j<3;j++){
+      if(mark[j].checked) sum+=j;
+    }
+  }
+  sum/=lessons.length;
+  let mid=document.getElementById('mid');
+  mid.innerHTML="Средний балл по контрольному сроку равен "+sum;
+}
+function cancel(){
+  let mid=document.getElementById('mid');
+  mid.innerHTML="Средний балл по контрольному сроку";
 }
 FillGroups();
