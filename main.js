@@ -59,8 +59,8 @@ function setFacAndCourse(group){
   let course=document.getElementById('form').course;
   for(let i=0;i<groups.length;i++){
     if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
-      faculty.value=groups[i].getElementsByTagName("faculty").innerHTML;
-      course.value=groups[i].getElementsByTagName("course").innerHTML;
+      faculty.value=groups[i].getElementsByTagName("faculty")[0].innerHTML;
+      course.value=groups[i].getElementsByTagName("course")[0].innerHTML;
       break;
     }
   }
