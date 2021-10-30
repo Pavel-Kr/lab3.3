@@ -87,11 +87,11 @@ function fillMarks(group, fio){
           let xmlMarks=students[j].getElementsByTagName("mark");
           for(let k=0;k<lessons.length;k++){
             let marks=lessons[k].getElementsByClassName('mark');
+            console.log("k="+k+","+Number(xmlMarks[k].innerHTML));
             for(let z=0;z<3;z++){
               if(marks[z].hasChildNodes()) marks[z].removeChild(marks[z].firstChild);
               let input=document.createElement('input');
               input.setAttribute('type','radio');
-              console.log(Number(xmlMarks[k].innerHTML));
               if(z==Number(xmlMarks[k].innerHTML)) input.selected=true;
               marks[z].append(input);
             }
