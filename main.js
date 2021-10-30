@@ -65,6 +65,7 @@ function setFacAndCourse(group){
   }
 }
 function Update(group){
+  console.log(group);
   setFIO(group);
   setFacAndCourse(group);
 }
