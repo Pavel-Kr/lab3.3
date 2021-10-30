@@ -40,7 +40,7 @@ function setFIO(group){
     select.removeChild(select.firstChild);
   }
   for(let i=0;i<groups.length;i++){
-    if(groups[i].getElementsByTagName("name").innerHTML==group){
+    if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
       students=groups[i].getElementsByTagName("students");
       for(let j=0;j<students.length;j++){
         let option=document.createElement('option');
@@ -57,7 +57,7 @@ function setFacAndCourse(group){
   let faculty=document.getElementById('faculty');
   let course=document.getElementById('course');
   for(let i=0;i<groups.length;i++){
-    if(groups[i].getElementsByTagName("name").innerHTML==group){
+    if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
       faculty.value=groups[i].getElementsByTagName("faculty").innerHTML;
       course.value=groups[i].getElementsByTagName("course").innerHTML;
       break;
