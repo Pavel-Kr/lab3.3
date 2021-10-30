@@ -93,7 +93,7 @@ function fillMarks(group, fio){
               let input=document.createElement('input');
               input.setAttribute('type','radio');
               input.setAttribute('name',"row"+k);
-              if(z==Number(xmlMarks[k].innerHTML)) input.selected=true;
+              if(z==Number(xmlMarks[k].innerHTML)) input.checked=true;
               marks[z].append(input);
             }
           }
