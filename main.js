@@ -91,6 +91,7 @@ function fillMarks(group, fio){
               if(marks[z].hasChildNodes()) marks[z].removeChild(marks[z].firstChild);
               let input=document.createElement('input');
               input.setAttribute('type','radio');
+              console.log(Number(xmlMarks[k].innerHTML));
               if(z==Number(xmlMarks[k].innerHTML)) input.selected=true;
               marks[z].append(input);
             }
@@ -103,7 +104,6 @@ function fillMarks(group, fio){
   }
 }
 function Update(group){
-  console.log(group);
   setFIO(group);
   setFacAndCourse(group);
   fillLessons(group);
@@ -111,7 +111,6 @@ function Update(group){
 function UpdateMarks(fio){
   let select=document.getElementById('group');
   let group=select.options[select.selectedIndex].value;
-  console.log(group);
   fillMarks(group,fio);
 }
 FillGroups();
