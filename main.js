@@ -23,9 +23,15 @@ function getXMLDocument(url)
         }
 }
 var xml=getXMLDocument("main.xml");
-var tag=xml.getElementsByTagName('faculty');
-for(i=0;i<tag.length;i++){
-  document.write(tag[i].innerHTML);
+var groups=xml.getElementsByTagName('group')
+function FillGroups(){
+  let select=document.getElementById('group');
+  for(let i=0;i<groups.length;i++){
+    let group=groups[i].getElementsByTagName('name')[0].innerHTML;
+    let option=document.createElement('option');
+    option.innerHTML=group;
+    option.value=group;
+    select.append(option);
+  }
 }
-//document.write("алло ебать");
-//console.log("бля ну хоть ты живи");
+FillGroups();

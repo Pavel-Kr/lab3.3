@@ -1,10 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <university>
-  <faculty_name>
+  <group>
+    <name>ИП-017</name>
     <faculty>ИВТ</faculty>
+    <course>2</course>
+    <students>
+      <student>
+        <FIO>Кривошеев Павел</FIO>
+        <marks>
+          <mark>2<mark>
+          <mark>2<mark>
+          <mark>1<mark>
+          <mark>2<mark>
+          <mark>1<mark>
+        </marks>
+      </student>
+      <student>
+        <FIO>Журин Андрей</FIO>
+        <marks>
+          <mark>0<mark>
+          <mark>1<mark>
+          <mark>1<mark>
+          <mark>2<mark>
+          <mark>2<mark>
+        </marks>
+      </student>
+      <student>
+        <FIO>Ястребов Семен</FIO>
+        <marks>
+          <mark>2<mark>
+          <mark>1<mark>
+          <mark>1<mark>
+          <mark>2<mark>
+          <mark>1<mark>
+        </marks>
+      </student>
+    </students>
+    <lessons>
+      <lesson>Интернет-технологии</lesson>
+      <lesson>ООП</lesson>
+      <lesson>СиАОД</lesson>
+      <lesson>Математика</lesson>
+      <lesson>Физ-ра</lesson>
+    </lessons>
+  </group>
+  <group>
+    <name>АБ-923</name>
     <faculty>АЭС</faculty>
+    <course>3</course>
+    <students>
+      <student>
+        <FIO>Бубуев Ержан</FIO>
+        <marks>
+          <mark>1<mark>
+          <mark>2<mark>
+          <mark>0<mark>
+          <mark>2<mark>
+          <mark>2<mark>
+        </marks>
+      </student>
+      <student>
+        <FIO>Панин Андрей</FIO>
+        <marks>
+          <mark>1<mark>
+          <mark>2<mark>
+          <mark>0<mark>
+          <mark>1<mark>
+          <mark>2<mark>
+        </marks>
+      </student>
+      <student>
+        <FIO>Бекмамбет Кибердвач</FIO>
+        <marks>
+          <mark>0<mark>
+          <mark>0<mark>
+          <mark>0<mark>
+          <mark>0<mark>
+          <mark>0<mark>
+        </marks>
+      </student>
+    </students>
+    <lessons>
+      <lesson>Мемология</lesson>
+      <lesson>Ржомбоведение</lesson>
+      <lesson>Философия</lesson>
+      <lesson>Экономика</lesson>
+      <lesson>Физ-ра</lesson>
+    </lessons>
+  </group>
+  <group>
+    <name>РК-131</name>
     <faculty>МРМ</faculty>
-    <faculty>МТС</faculty>
-  </faculty_name>
+    <course>1</course>
+    <students>
+      <student>
+        <FIO>Джонни Синс</FIO>
+        <marks>
+          <mark>1<mark>
+          <mark>2<mark>
+          <mark>2<mark>
+          <mark>0<mark>
+          <mark>2<mark>
+        </marks>
+      </student>
+      <student>
+        <FIO>Сан Саныч</FIO>
+        <marks>
+          <mark>2<mark>
+          <mark>2<mark>
+          <mark>2<mark>
+          <mark>2<mark>
+          <mark>2<mark>
+        </marks>
+      </student>
+      <student>
+        <FIO>Ноу Нейм</FIO>
+        <marks>
+          <mark>1<mark>
+          <mark>2<mark>
+          <mark>1<mark>
+          <mark>1<mark>
+          <mark>0<mark>
+        </marks>
+      </student>
+    </students>
+    <lessons>
+      <lesson>История</lesson>
+      <lesson>Физика</lesson>
+      <lesson>Радиотехника</lesson>
+      <lesson>Право</lesson>
+      <lesson>Физ-ра</lesson>
+    </lessons>
+  </group>
 </university>
