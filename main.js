@@ -42,7 +42,7 @@ function setFIO(group){
   for(let i=0;i<groups.length;i++){
     console.log(groups[i].getElementsByTagName("name")[0].innerHTML);
     if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
-      students=groups[i].getElementsByTagName("students");
+      students=groups[i].getElementsByTagName("student");
       for(let j=0;j<students.length;j++){
         let option=document.createElement('option');
         let fio=students[j].getElementsByTagName("FIO")[0].innerHTML;
