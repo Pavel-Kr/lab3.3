@@ -65,9 +65,22 @@ function setFacAndCourse(group){
     }
   }
 }
+function fillLessons(group){
+  let lessons=document.getElementsByClassName('lesson');
+  for(let i=0;i<groups.length;i++){
+    if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
+      let xmlLessons=groups[i].getElementsByTagName("lesson");
+      for(let j=0;j<lessons.length;j++){
+        lessons[j].innerHTML=xmlLessons[j].innerHTML;
+      }
+      break;
+    }
+  }
+}
 function Update(group){
   console.log(group);
   setFIO(group);
   setFacAndCourse(group);
+  fillLessons(group);
 }
 FillGroups();
