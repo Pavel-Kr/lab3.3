@@ -40,7 +40,7 @@ function setFIO(group){
     select.removeChild(select.firstChild);
   }
   for(let i=0;i<groups.length;i++){
-    groups[i].getElementsByTagName("name")[0].innerHTML
+    console.log(groups[i].getElementsByTagName("name")[0].innerHTML);
     if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
       students=groups[i].getElementsByTagName("students");
       for(let j=0;j<students.length;j++){
