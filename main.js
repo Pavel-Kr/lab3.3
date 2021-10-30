@@ -34,4 +34,38 @@ function FillGroups(){
     select.append(option);
   }
 }
+function setFIO(group){
+  let select=document.getElementById('FIO');
+  while(select.hasChildNodes()){
+    select.removeChild(select.firstChild);
+  }
+  for(let i=0;i<groups.length;i++){
+    if(groups[i].getElementsByTagName("name").innerHTML==group){
+      students=groups[i].getElementsByTagName("students");
+      for(let j=0;j<students.length;j++){
+        let option=document.createElement('option');
+        let fio=students[j].getElementsByTagName("FIO")[0].innerHTML;
+        option.innerHTML=fio;
+        option.value=fio;
+        select.append(option);
+      }
+    }
+    break;
+  }
+}
+function setFacAndCourse(group){
+  let faculty=document.getElementById('faculty');
+  let course=document.getElementById('course');
+  for(let i=0;i<groups.length;i++){
+    if(groups[i].getElementsByTagName("name").innerHTML==group){
+      faculty.value=groups[i].getElementsByTagName("faculty").innerHTML;
+      course.value=groups[i].getElementsByTagName("course").innerHTML;
+      break;
+    }
+  }
+}
+function Update(group){
+  setFIO(group);
+  setFacAndCourse(group);
+}
 FillGroups();

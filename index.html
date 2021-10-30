@@ -9,7 +9,7 @@
     <form id="form">
       Факультет: <input type="text" name="faculty" value="">
       Курс: <input type="text" name="course" value="">
-      Группа: <select id="group" name="">
+      Группа: <select id="group" name="" onchange="Update(this.options[this.selectedIndex].value)">
         <option value="">Выбрать...</option>
       </select>
       ФИО: <select id="FIO" name="">
