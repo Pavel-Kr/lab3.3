@@ -55,8 +55,8 @@ function setFIO(group){
   }
 }
 function setFacAndCourse(group){
-  let faculty=document.getElementById('faculty');
-  let course=document.getElementById('course');
+  let faculty=document.getElementById('form').faculty;
+  let course=document.getElementById('form').course;
   for(let i=0;i<groups.length;i++){
     if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
       faculty.value=groups[i].getElementsByTagName("faculty").innerHTML;
