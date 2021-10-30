@@ -126,6 +126,7 @@ function calculateMid(){
       if(marks[j].checked) sum+=j;
     }
   }
+  console.log("sum= "+sum+", lessons= "+lessons.length+);
   sum/=lessons.length;
   let mid=document.getElementById('mid');
   mid.innerHTML="Средний балл по контрольному сроку равен "+sum;
