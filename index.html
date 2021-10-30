@@ -12,48 +12,48 @@
       Группа: <select id="group" name="" onchange="Update(this.options[this.selectedIndex].value)">
         <option value="">Выбрать...</option>
       </select>
-      ФИО: <select id="FIO" name="">
+      ФИО: <select id="FIO" name="" onchange="UpdateMarks(this.options[this.selectedIndex].value)">
         <option value="">Выбрать...</option>
       </select><br><br>
+      <table border="1" id="table">
+        <tr>
+          <td>Предмет</td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr class="row">
+          <td class="lesson">Предмет 1</td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+        </tr>
+        <tr class="row">
+          <td class="lesson">Предмет 2</td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+        </tr>
+        <tr class="row">
+          <td class="lesson">Предмет 3</td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+        </tr>
+        <tr class="row">
+          <td class="lesson">Предмет 4</td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+        </tr>
+        <tr class="row">
+          <td class="lesson">Предмет 5</td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+          <td class="mark"></td>
+        </tr>
+      </table><br>
     </form>
-    <table border="1">
-      <tr>
-        <td>Предмет</td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td class="lesson">Предмет 1</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="lesson">Предмет 2</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="lesson">Предмет 3</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="lesson">Предмет 4</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="lesson">Предмет 5</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table><br>
     <button>Выполнить</button>
     <button>Отменить</button>
     <script src="main.js" charset="utf-8"></script>

@@ -77,10 +77,40 @@ function fillLessons(group){
     }
   }
 }
+function fillMarks(group, fio){
+  for(let i=0;i<groups.length;i++){
+    if(groups[i].getElementsByTagName("name")[0].innerHTML==group){
+      let students=groups[i].getElementsByTagName("student");
+      for(let j=0;j<students.length;j++){
+        if(students[j].getElementsByTagName("FIO")[0].innerHTML==fio){
+          let lessons=document.getElementsByClassName('row');
+          let xmlMarks=students[j].getElementsByTagName("mark");
+          for(let k=0;k<lessons.length;k++){
+            let marks=lessons[k].getElementsByClassName('mark');
+            for(let z=0;z<3;z++){
+              let input=document.createElement('input');
+              input.setAttribute('type','radio');
+              if(z==xmlMarks[k].innerHTML) input.selected=true;
+              marks[z].append(input);
+            }
+          }
+          break;
+        }
+      }
+      break;
+    }
+  }
+}
 function Update(group){
   console.log(group);
   setFIO(group);
   setFacAndCourse(group);
   fillLessons(group);
+}
+function UpdateMarks(fio){
+  let select=document.getElementById('group');
+  let group=select.options[select.selectedIndex].value;
+  console.log(group);
+  fillMarks(group,fio);
 }
 FillGroups();
