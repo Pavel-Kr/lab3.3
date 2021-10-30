@@ -23,7 +23,7 @@ function getXMLDocument(url)
         }
 }
 var xml=getXMLDocument("main.xml");
-var tag=xml.getElementByTagName('faculty_name');
+var tag=xml.getElementsByTagName('faculty_name');
 for(i=0;i<tag.length;i++){
   document.write(tag.item(i));
 }
