@@ -25,7 +25,7 @@ function getXMLDocument(url)
 var xml=getXMLDocument("main.xml");
 var tag=xml.getElementsByTagName('faculty');
 for(i=0;i<tag.length;i++){
-  document.write(tag.item(i).text);
+  document.write(tag[i].innerHTML);
 }
 //document.write("алло ебать");
 //console.log("бля ну хоть ты живи");
