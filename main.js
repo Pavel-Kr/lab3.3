@@ -120,19 +120,26 @@ function UpdateMarks(fio){
 function calculateMid(){
   let lessons=document.getElementsByClassName('row');
   let skipped=document.getElementsByClassName('skip');
+  let les=0;
   let sum=0;
   for(let i=0;i<lessons.length;i++){
     let marks=lessons[i].getElementsByClassName('mark');
     if(skipped[i].firstChild.checked==false){
+      les++;
       for(let j=0;j<3;j++){
         if(marks[j].firstChild.checked) sum+=j;
       }
     }
   }
   console.log("sum= "+sum+", lessons= "+lessons.length);
-  sum/=lessons.length;
   let mid=document.getElementById('mid');
-  mid.innerHTML="Средний балл по контрольному сроку равен "+sum;
+  if(les==0){
+    mid.innerHTML="Выберите хотя бы один предмет";
+  }
+  else{
+    sum/=les;
+    mid.innerHTML="Средний балл по контрольному сроку равен "+sum;
+  }
 }
 function cancel(){
   let mid=document.getElementById('mid');
