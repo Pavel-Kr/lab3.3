@@ -157,6 +157,6 @@ function showMarks(){
       }
     }
   }
-  document.getElementById('scores').innerHTML="Нулей: "+scores[0]+"\nЕдиниц: "+scores[1]+"\nДвоек: "+scores[2];
+  document.getElementById('scores').innerHTML="Нулей: "+scores[0]+"<br>Единиц: "+scores[1]+"<br>Двоек: "+scores[2]+"<br>";
 }
 FillGroups();
