@@ -134,5 +134,19 @@ function calculateMid(){
 function cancel(){
   let mid=document.getElementById('mid');
   mid.innerHTML="Средний балл по контрольному сроку";
+  document.getElementById('scores').innerHTML="";
+}
+function showMarks(){
+  let lessons=document.getElementsByClassName('row');
+  let scores=new Array(0,0,0);
+  for(let i=0;i<lessons.length;i++){
+    let marks=lessons[i].getElementsByClassName('mark');
+    for(let j=0;j<3;j++){
+      if(marks[j].firstChild.checked){
+        scores[j]++;
+      }
+    }
+  }
+  document.getElementById('scores').innerHTML="Нулей: "+scores[0]+"\nЕдиниц: "+scores[1]+"\nДвоек: "+scores[2];
 }
 FillGroups();
