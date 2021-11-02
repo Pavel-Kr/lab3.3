@@ -123,7 +123,7 @@ function calculateMid(){
   let sum=0;
   for(let i=0;i<lessons.length;i++){
     let marks=lessons[i].getElementsByClassName('mark');
-    if(skipped[i].checked==false){
+    if(skipped[i].firstChild.checked==false){
       for(let j=0;j<3;j++){
         if(marks[j].firstChild.checked) sum+=j;
       }
