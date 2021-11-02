@@ -119,11 +119,14 @@ function UpdateMarks(fio){
 }
 function calculateMid(){
   let lessons=document.getElementsByClassName('row');
+  let skipped=document.getElementsByClassName('skip');
   let sum=0;
   for(let i=0;i<lessons.length;i++){
     let marks=lessons[i].getElementsByClassName('mark');
-    for(let j=0;j<3;j++){
-      if(marks[j].firstChild.checked) sum+=j;
+    if(skipped[i].checked==false){
+      for(let j=0;j<3;j++){
+        if(marks[j].firstChild.checked) sum+=j;
+      }
     }
   }
   console.log("sum= "+sum+", lessons= "+lessons.length);
